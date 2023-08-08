@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+$blue:rgb(48, 138, 248);
+
+body{
+    padding: 0px 20px;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    animation:top 3s linear;
+    @keyframes top {
+        0%{
+            opacity: 0;
+        }
+        
+    }
+  h2{
+        font: 30px;
+         color:$blue;
+         font-weight: lighter;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        //  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    }
+    nav {
+        display: flex;
+            justify-content: space-between;
+    align-items: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    nav li{
+       
+        list-style: none;
+        margin: 0px 20px;
+    }
+    nav li a{
+         text-decoration: none;
+         color:$blue;
+    }
+    nav ul li i{
+       
+        font-size: 20px;
+    }
+    input[type="checkbox"]{
+        display: none;
+    }
+    input[type="checkbox"]:checked~ nav ul{
+        display: block;
+    }
+
+    .fa-bars{
+        font-size: 20px;
+        color: $blue;
+        display: none;
+    }
+
+    
+    button{
+        padding: 10px 20px;
+        background-color: $blue;
+        border-radius: 20px;
+        border: none;
+        color: white;
+
+    }
+    button:hover{
+        background-color:rgb(1, 94, 208);
+    }
+    
+}
+section{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    padding: 20px;
+
+   .container-1{
+    width: 50%;
+     
+     display: flex;
+     justify-content: center;
+     align-items: start;
+     flex-direction: column;
+     animation: left 3s linear;
+   
+   }
+   @keyframes left {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    
+   }
+   .container-1 h3{
+    font-size: 30px;
+    color: rgb(91, 91, 91);
+
+   }
+    .container-1 span{
+        font-size:100px;
+        color:$blue;
+         font-weight:lighter;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .container-1 .para1{
+        padding: 10px;
+        font-size: larger;
+        font-weight: bolder;
+
+    }
+    .container-1 .para2{
+        padding: 10px;
+
+    }
+    .container-1 button{
+        padding: 10px 20px;
+        background-color: $blue;
+        border-radius: 20px;
+        border: 0px;
+        margin: 10px 0px ;
+        color: white;
+        font-weight: bolder;
+
+    }
+    button:hover{
+        background-color:rgb(1, 94, 208);
+    }
+
+   .container-2{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: right 3s linear;
+     
+
+    
+
+   }
+    .circle{
+    width: 70%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: rgb(215, 255, 255);
+   }
+    .container-2 img{
+    position: absolute;
+    top: 0;
+    object-fit: fill;
+   transform:rotate(40deg);
+    width:80%;
+    transition: all 2s;
+   
+    
+   }
+   @keyframes right {
+    0%{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+    
+   }
+   .container-2:hover img{
+    width: 100%;
+       transform:rotate(10deg);
+
+   }
+   
+  
+}
+
+@media screen and (max-width:900px){
+    
+    nav .fa-bars{
+        display: block;
+        padding: 20px;
+    }
+    header nav ul{
+       display: none;
+        
+
+    }
+  
+    section{
+        flex-direction: column;
+        .container-1{
+            width: 100%;
+
+
+
+        }
+        .container-1 span{
+            font-size: 50px;
+            
+
+
+
+        }
+        .container-2{
+            width: 100%;
+
+            
+        }
+        
+        
+    }
+}
